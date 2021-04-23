@@ -3,7 +3,7 @@
 from argparse import ArgumentParser as AP
 from time import sleep
 
-ap = AP(description="A simple program to simulate typing effect like Typer.JS")
+ap = AP(description="A simple program to simulate animated typing effect like Typer.JS")
 
 ap.add_argument('-delay',type=int,default=100,help='Time delay between typed characters (in ms)')
 ap.add_argument('-delete_delay',type=int,default=50,help='Time delay between deleted characters (in ms)')
