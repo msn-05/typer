@@ -7,7 +7,7 @@ ap = AP(description="A simple program to simulate animated typing effect like Ty
 
 ap.add_argument('-delay',type=int,default=100,help='Time delay between typed characters (in ms)')
 ap.add_argument('-delete_delay',type=int,default=50,help='Time delay between deleted characters (in ms)')
-ap.add_argument('-words_delay',type=int,default=500,help='Time delay between typed words (in ms)')
+ap.add_argument('-words_delay',type=int,default=800,help='Time delay between typed words (in ms)')
 ap.add_argument('-start',type=str,default='',help='The starting word or sentence')
 
 ap.add_argument('words',type=str,nargs='+',help='The words to be typed')

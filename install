@@ -7,22 +7,27 @@ off='\e[0m'
 if [[ -f $PATH/toilet ]]
 then
 	printf $green"Dependencies already installed!\n"$off
+	sleep 2s
 else
 	printf $green"Installing dependencies...\n"$off
-	pkg update -y
-	pkg upgrade -y
-	pkg install toilet -y
+	apt update -y
+	apt upgrade -y
+	apt install toilet -y
 fi
 
 clear
 
-toilet -f mono12 -F gay "Typer"
+toilet -f mono12 -F metal "Typer"
+sleep 2s
 
 printf $green"Simple program to simulate typing effect!\n\n"$off
 sleep 2s
 
 printf $green"Installing this program...\n\n"$off
-cp dist/typer $PATH
+for path in ${PATH//:/ }; do
+    cp dist/typer $path
+    
+done
 sleep 2s
 
 printf $green"Successfully installed!\n\n"$off
@@ -31,4 +36,4 @@ sleep 2s
 printf $red"Live demo:\n"$off
 typer -s "I am a " programmer "web developer" "wannabe freelancer 🐸"
 
-printf $green"Type \e[1mtyper -h"$green" for help"$off
+printf "\nType \e[1m${green}typer -h"$off" for help\n"
