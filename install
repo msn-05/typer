@@ -4,6 +4,8 @@ red='\e[31m'
 green='\e[32m'
 off='\e[0m'
 
+unset LD_PRELOAD
+
 if [[ -f $PATH/toilet ]]
 then
 	printf $green"Dependencies already installed!\n"$off
