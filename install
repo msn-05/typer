@@ -6,15 +6,16 @@ off='\e[0m'
 
 unset LD_PRELOAD
 
-if [[ -f $PATH/toilet ]]
+bin=/data/data/com.termux/files/usr/bin
+
+if [[ -f $bin/toilet ]]
 then
 	printf $green"Dependencies already installed!\n"$off
 	sleep 2s
 else
 	printf $green"Installing dependencies...\n"$off
-	apt update -y
-	apt upgrade -y
-	apt install toilet -y
+	apt update
+	apt install figlet toilet -y
 fi
 
 clear
@@ -26,10 +27,8 @@ printf $green"Simple program to simulate typing effect!\n\n"$off
 sleep 2s
 
 printf $green"Installing this program...\n\n"$off
-for path in ${PATH//:/ }; do
-    cp dist/typer $path
-    
-done
+cp dist/typer $bin
+chmod +x $bin/typer
 sleep 2s
 
 printf $green"Successfully installed!\n\n"$off
