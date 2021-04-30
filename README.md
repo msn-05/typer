@@ -1,7 +1,7 @@
 # Typer
 Simple program to simulate typing effect animation just like <a href="https://steven.codes/typerjs">Typer.JS</a> but in CLI
 <br>
-Coded in python. Compiled to binary with <a href="https://pyinstaller.org">pyinstaller</a><br>
+Coded in python.
 Installing and simple demo 👇<br>
 <img src="./preview/demo.svg"><br>
 <i>Yes I made this in <a href="https://termux.com">Termux</a> 🙃</i><br>
