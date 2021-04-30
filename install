@@ -4,8 +4,6 @@ red='\e[31m'
 green='\e[32m'
 off='\e[0m'
 
-unset LD_PRELOAD
-
 bin=/data/data/com.termux/files/usr/bin
 
 if [[ -f $bin/toilet ]]
@@ -15,7 +13,7 @@ then
 else
 	printf $green"Installing dependencies...\n"$off
 	apt update
-	apt install figlet toilet -y
+	apt install python figlet toilet -y
 fi
 
 clear
@@ -27,7 +25,7 @@ printf $green"Simple program to simulate typing effect!\n\n"$off
 sleep 2s
 
 printf $green"Installing this program...\n\n"$off
-cp dist/typer $bin
+cp typer $bin
 chmod +x $bin/typer
 sleep 2s
 
